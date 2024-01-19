@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<head>
+<html>
+<meta charset = "UTF-8">
+	<title>Career</title>
+	<meta name = "description" content = "Pet Rescue website">
+	<meta name = "author" content = "Abid Alikhan">	
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href = "./index.css" rel = "stylesheet" type = "text/css" >
+	<link rel="icon" type="image/jpg" href="images/candd.jpg">
+</head>	
+
+<body class="body">
+	<div class="container">
+		<header>
+			<div class="header-content">
+			
+		<img src="images/candd.jpg" alt="my sample image" width="100" height="100" class="ings">
+
+		<p class="title"> Welcome to Pet Rescue</p>
+		<div class="time">
+			<div class="time_day">
+		<div class="t-row">
+			<p id="local_time"></p>
+			<div class="time">
+				<h4 id="open_closed"></h4>
+				<p id="hours_of_operation"></p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</header>
+</div>
+	<nav>
+		
+			
+		<ul>
+		
+			<a href ="index.html"><li >Home Page</li></a>
+			<a href="about.html"><li>About Us </li></a>
+			<a href="contact.html"><li>Pets</li></a>
+			<a href="products.html"><li>Accessories</li></a>
+			<a href="tours.html"><li>Adopt</li></a>	
+			<a href="careers.html"><li class ="current_tab">Join Us</li></a>
+			
+			</ul>	
+		</div>
+	</nav>
+
+
+<div class="writing">
+
+	<p>Thank you for your interest in Pet Rescue! We rely on the support of volunteers like you to help us provide the best possible care for the animals in our shelter. As a volunteer, you will play an important role in helping us achieve our mission of rescuing, rehabilitating, and rehoming animals in need.<p>
+	<p>	Here are some of the ways you can help as a volunteer at our shelter:</p>
+	<ol>
+		<li>Animal Care: Volunteers will work alongside our staff to provide basic care for the animals in our shelter, including feeding, cleaning, and socializing with them.</li>
+		<br>
+		<li>Adoption Events: Volunteers will help us with our adoption events by assisting with set-up and take-down, handling animals, and interacting with potential adopters.</li>
+		<br>
+		<li>Fundraising: Volunteers can help us with fundraising events by assisting with planning, set-up and take-down, and other related tasks</li>
+		<br>
+		<li>Administration: Volunteers can assist us with administrative tasks such as data entry, filing, and other tasks that help us keep our shelter running smoothly.</li>
+		<br>
+		<li>Marketing and Social Media: Volunteers can help us by creating content for our social media pages, website, and other marketing materials.</li>
+	</ol>
+	<p>As a volunteer, you will receive training and support from our staff to help you succeed in your role. We also offer opportunities for you to learn more about animal care and welfare.
+
+We ask that volunteers commit to a minimum of six hours per week, but we are happy to accommodate your schedule as best we can.
+
+If you are interested in volunteering at our shelter, please fill out our online application form. Once we receive your application, we will be in touch with you to schedule an orientation session and to discuss your interests and availability.</p>
+
+<p>Thank you for considering volunteering at our shelter. We are grateful for your support and look forward to working with you to help animals in need.</p>
+</div>
+
+
+
+
+
+<div class="main">
+	<h1 class="f-title">If You're Interested in Volunteering, Please Fill Out This Form</h1>
+
+	<form method="post" class="form" onsubmit="submitForm()" >
+		<label for="name">Name:</label>
+		<input type="text"   name="name" placeholder="Required" required>
+		<br>
+
+		<label for="email">Email:</label>
+		<input type="email"  name="email" placeholder="Required" required>
+		<br>
+		<label for="phone">Phone Number:</label>
+		<input type="phone"  name="phone" placeholder="Required" required>
+		<br>
+
+		<label for="type">Reason for Volenteer:</label>
+		<select id="type" name="type" placeholder="Required" required>
+			<option value="" disabled selected>Select an option</option>
+			<option value="School credit">School credit</option>
+			<option value="Fundraising">Fundraising</option>
+			<option value="experience">Experience</option>
+			<option value="love">Love for Animals</option>
+			<option value="Other">Other</option>
+		</select>
+
+		<br>
+		<label for="date">When can you start?</label>
+		<input type="date" name="date" placeholder="Required" required>
+		<br>
+		<br>
+
+		<label for="message">Message(optional):</label>
+		<textarea  name="message"></textarea>
+		<br>
+
+		<button class="submit" type="submit">Send</button>
+		<button class="reset" type="reset">Reset</button>
+
+	</form>
+	<script>
+		function submitForm() { 
+			alert('Thank you for volunteering!');
+		}
+	</script>
+</div>
+
+
+
+
+</body>
+</html>
+<footer>
+	<p>@2023 Abid Alikhan</p>
+</footer>
+<script>
+			var date = new Date();
+			var hour = date.getHours();
+			if ((hour > 6) && (hour < 16)) {
+				document.getElementById("open_closed").innerHTML = "We are Currently Open!";
+				document.getElementById("open_closed").style.color = "green";
+			}
+			else if (hour < 17) {
+				document.getElementById("open_closed").innerHTML = "We are Closing soon";
+				document.getElementById("open_closed").style.color = "orange";
+			}
+			else {
+				document.getElementById("open_closed").innerHTML = "Sorry, we are Closed :( ";
+				document.getElementById("open_closed").style.color = "red";
+			}
+			document.getElementById("hours_of_operation").innerHTML = "Hours of operation:<br/>Mon - Sun: 6 am - 5 pm<br/>";
+			document.getElementById("local_time").innerHTML = "Local date/time: " + date;
+		</script>
+	</div>

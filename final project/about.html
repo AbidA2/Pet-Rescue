@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<head>
+<html>
+<meta charset = "UTF-8">
+	<title>About Us</title>
+	<meta name = "description" content = "Pet Rescue website">
+	<meta name = "author" content = "Abid Alikhan">	
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href = "./index.css" rel = "stylesheet" type = "text/css" >
+	<link rel="icon" type="image/jpg" href="images/candd.jpg">
+</head>	
+
+
+<body class="body">
+	<div class="container">
+		<header>
+			<div class="header-content">
+			
+		<img src="images/candd.jpg" alt="my sample image" width="100" height="100" class="ings">
+
+		<p class="title"> Welcome to Pet Rescue</p>
+		<div class="time">
+			<div class="time_day">
+		<div class="t-row">
+			<p id="local_time"></p>
+			<div class="time">
+				<h4 id="open_closed"></h4>
+				<p id="hours_of_operation"></p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</header>
+		
+	<nav>
+		
+			
+		<ul>
+		
+			<a href ="index.html"><li >Home Page</li></a>
+			<a href="about.html"><li class ="current_tab">About Us </li></a>
+			<a href="contact.html"><li>Pets</li></a>
+			<a href="products.html"><li>Accessories</li></a>
+			<a href="tours.html"><li>Adopt</li></a>	
+			<a href="careers.html"><li>Join Us</li></a>
+			
+			</ul>	
+		</div>
+	</nav>
+
+
+<div class="writing">
+	<p class="nd">We are committed to promoting responsible pet ownership and educating the public about the importance of spaying and neutering, vaccinations, and other important aspects of pet care.</p>
+
+	<h2 class="st">Our Mission</h2>
+	<p class="nd"> Pet rescue is a nonprofit animal shelther dedicated to putting an end to animal homelessness and giving care and comfort to companion animals in need. We treat all our animals as if they were our own to make them as confortable as they can until they finally find their forever home.</p>
+
+	<img src = "images/petz.jpg" alt="my sample image" width="650" height="450" class="petz">
+
+	<h2 class="nd">Our Shelter</h2>
+
+	<p class="nd">At our shelter, we believe that every animal deserves a chance at a happy and fulfilling life, regardless of their background or circumstances. Whether they are abandoned, abused, or simply in need of a new home, we are here to provide them with the care and attention they need to thrive.</p>
+
+	<h2 class="nd">Our Staff</h2>
+	<p class="nd">Our team of dedicated volunteers and staff work tirelessly to ensure that our animals receive the best possible care. From providing daily meals and veterinary care, to socializing and training, we do everything we can to help these animals become happy, healthy, and well-adjusted pets.
+	We are also committed to finding loving and responsible homes for each and every one of our animals. We carefully screen potential adopters to ensure that our animals are placed in safe and loving homes where they will be well cared for and cherished.</p>
+
+	
+
+	<p class="nd">Thank you for considering our shelter as a potential adopter or supporter. We are grateful for any support you can offer, and we look forward to helping animals in need for many years to come.</p>
+</div>
+
+
+
+
+
+</body>
+</html>
+<footer>
+	<p>@2023 Abid Alikhan</p>
+</footer>
+</head>
+
+		<script>
+			var date = new Date();
+			var hour = date.getHours();
+			if ((hour > 6) && (hour < 16)) {
+				document.getElementById("open_closed").innerHTML = "We are Currently Open!";
+				document.getElementById("open_closed").style.color = "green";
+			}
+			else if (hour < 17) {
+				document.getElementById("open_closed").innerHTML = "We are Closing soon";
+				document.getElementById("open_closed").style.color = "orange";
+			}
+			else {
+				document.getElementById("open_closed").innerHTML = "Sorry, we are Closed :( ";
+				document.getElementById("open_closed").style.color = "red";
+			}
+			document.getElementById("hours_of_operation").innerHTML = "Hours of operation:<br/>Mon - Sun: 6 am - 5 pm<br/>";
+			document.getElementById("local_time").innerHTML = "Local date/time: " + date;
+		</script>
+	</div>

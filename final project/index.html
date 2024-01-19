@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Pet Rescue Home</title>
+	<meta name="description" content="Pet Rescue website">
+	<meta name="author" content="Abid Alikhan">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./index.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/jpg" href="images/candd.jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+	<div class="container">
+		<header>
+			<div class="header-content">
+			
+		<img src="images/candd.jpg" alt="my sample image" width="100" height="100" class="ings">
+
+		<p class="title"> Welcome to Pet Rescue</p>
+		<div class="time">
+			<div class="time_day">
+		<div class="t-row">
+			<p id="local_time"></p>
+			<div class="time">
+				<h4 id="open_closed"></h4>
+				<p id="hours_of_operation"></p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</header>
+</div>
+
+
+		
+		<nav>
+			<ul>
+				<a href="index.html"><li class="current_tab">Home Page</li></a>
+				<a href="about.html"><li>About Us</li></a>
+				<a href="contact.html"><li>Pets</li></a>
+				<a href="products.html"><li>Accessories</li></a>
+				<a href="tours.html"><li>Adopt</li></a>	
+				<a href="careers.html"><li>Join Us</li></a>
+				
+			</ul>	
+		</nav>
+		<div align="center" class="writing">
+			<h1> Welcome to Pet Rescue!</h1>
+			<p> A perfect place to find your best friend and give them a forever home</p>
+		</div>
+	
+	
+			<div class="bround">
+				<img src="images/adopt2.png" alt="my sample image">
+			</div>
+		
+		<script>
+			var date = new Date();
+			var hour = date.getHours();
+			if ((hour > 6) && (hour < 16)) {
+				document.getElementById("open_closed").innerHTML = "We are Currently Open!";
+				document.getElementById("open_closed").style.color = "green";
+			}
+			else if (hour < 17) {
+				document.getElementById("open_closed").innerHTML = "We are Closing soon";
+				document.getElementById("open_closed").style.color = "orange";
+			}
+			else {
+				document.getElementById("open_closed").innerHTML = "Sorry, we are Closed :( ";
+				document.getElementById("open_closed").style.color = "red";
+			}
+			document.getElementById("hours_of_operation").innerHTML = "Hours of operation:<br/>Mon - Sun: 6 am - 5 pm<br/>";
+			document.getElementById("local_time").innerHTML = "Local date/time: " + date;
+		</script>
+	
+
+	<footer>
+		<p>@2023 Abid Alikhan</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<head>
+<html>
+<meta charset = "UTF-8">
+	<title>Appointment</title>
+	<meta name = "description" content = "Pet Rescue website">
+	<meta name = "author" content = "Abid Alikhan">	
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<link href = "./index.css" rel = "stylesheet" type = "text/css" >
+	<link rel="icon" type="image/jpg" href="images/candd.jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>	
+
+<body class="body">
+	<div class="container">
+		<header>
+			<div class="header-content">
+			
+		<img src="images/candd.jpg" alt="my sample image" width="100" height="100" class="ings">
+
+		<p class="title"> Welcome to Pet Rescue</p>
+		<div class="time">
+			<div class="time_day">
+		<div class="t-row">
+			<p id="local_time"></p>
+			<div class="time">
+				<h4 id="open_closed"></h4>
+				<p id="hours_of_operation"></p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</header>
+	<nav>
+		
+			
+		<ul>
+		
+			<a href ="index.html"><li >Home Page</li></a>
+			<a href="about.html"><li>About Us </li></a>
+			<a href="contact.html"><li>Pets</li></a>
+			<a href="products.html"><li>Accessories</li></a>
+			<a href="tours.html"><li class ="current_tab">Adopt</li></a>	
+			<a href="careers.html"><li>Join Us</li></a>
+			
+			</ul>	
+		</div>
+	</nav>
+
+
+
+
+<h2 align="center"> If you are interested in adoption you must fill out the application for an appointment.</h2>
+<div class="main">
+	<script>
+	function vailidateform(){
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const pet = document.querySelector('input[name="pet"]:checked');
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+
+  		if (!name || !email || !phone || !pet || !date || !time) {
+			alert('Please make sure to fill in all the required fields!');
+			return false;
+		}
+	}
+</script>
+<h1>Schedule an Appointment</h1>
+<form method="post" action="sform.php" class="form" onsubmit="return vailidateform()">
+	<label for="name">Name:</label>
+	<input type="text" id="name" name="name" placeholder="Required" >
+	<br>
+
+	<label for="email">Email:</label>
+	<input type="email" id="email" name="email" placeholder="Required" >
+	<br>
+
+	<label for="phone">Phone Number:</label>
+	<input type="phone" id="phone" name="phone" placeholder="Required" >
+	<br>
+	<br>
+
+	<div class="petselect">
+		<label for="cat">Cat</label>
+		<input type="radio" name="pet" value="cat">
+		<label for="dog" style="margin-left: 10px;">Dog</label>
+		<input type="radio" name="pet" value="dog">
+	</div>
+	<br>
+
+	<label for="date">Schedule a date:</label>
+	<input type="date" id="date" name="date" >
+	<br>
+
+	<label for="time">Select a Time:</label>
+	<select id="time" name="time">
+		<option value="">--Select a Time--</option>
+		<option value="09:00">9:00 AM</option>
+		<option value="10:00">10:00 AM</option>
+		<option value="11:00">11:00 AM</option>
+		<option value="12:00">12:00 PM</option>
+		<option value="13:00">1:00 PM</option>
+		<option value="14:00">2:00 PM</option>
+		<option value="15:00">3:00 PM</option>
+		<option value="16:00">4:00 PM</option>
+		<option value="17:00">5:00 PM</option>
+	</select>
+	<br>
+	<br>
+
+	<label for="message">Message (optional):</label>
+	<textarea name="message"></textarea>
+	<br>
+
+	<button class="submit" type="submit">Send</button>
+	<button class="reset" type="reset">Reset</button>
+</form>
+</div>
+
+
+
+
+
+</body>
+</html>
+<footer>
+	<p>@2023 Abid Alikhan</p>
+</footer>
+</head>
+<script>
+			var date = new Date();
+			var hour = date.getHours();
+			if ((hour > 6) && (hour < 16)) {
+				document.getElementById("open_closed").innerHTML = "We are Currently Open!";
+				document.getElementById("open_closed").style.color = "green";
+			}
+			else if (hour < 17) {
+				document.getElementById("open_closed").innerHTML = "We are Closing soon";
+				document.getElementById("open_closed").style.color = "orange";
+			}
+			else {
+				document.getElementById("open_closed").innerHTML = "Sorry, we are Closed :( ";
+				document.getElementById("open_closed").style.color = "red";
+			}
+			document.getElementById("hours_of_operation").innerHTML = "Hours of operation:<br/>Mon - Sun: 6 am - 5 pm<br/>";
+			document.getElementById("local_time").innerHTML = "Local date/time: " + date;
+		</script>
+	</div>

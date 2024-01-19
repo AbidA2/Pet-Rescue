@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<head>
+<html>
+<meta charset = "UTF-8">
+	<title>Products</title>
+	<meta name = "description" content = "Pet Rescue website">
+	<meta name = "author" content = "Abid Alikhan">	
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<link href = "./index.css" rel = "stylesheet" type = "text/css" >
+	<link rel="icon" type="image/jpg" href="images/candd.jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>	
+
+<body class="body">
+	<div class="container">
+		<header>
+			<div class="header-content">
+			
+		<img src="images/candd.jpg" alt="my sample image" width="100" height="100" class="ings">
+
+		<p class="title"> Welcome to Pet Rescue</p>
+		<div class="time">
+			<div class="time_day">
+		<div class="t-row">
+			<p id="local_time"></p>
+			<div class="time">
+				<h4 id="open_closed"></h4>
+				<p id="hours_of_operation"></p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</header>
+</div>
+	<nav>
+		
+		
+			
+		<ul>
+		
+			<a href ="index.html"><li >Home Page</li></a>
+			<a href="about.html"><li>About Us </li></a>
+			<a href="contact.html"><li>Pets</li></a>
+			<a href="products.html"><li class ="current_tab">Accessories</li></a>
+			<a href="tours.html"><li>Adopt</li></a>	
+			<a href="careers.html"><li>Join Us</li></a>
+			</ul>	
+		</div>
+	</nav>
+	<div align="center" class="writing">
+	
+<p> We sell a wide assortment of products avilable for purchase for your pet on location all purchases help aid our cause</p>
+<p> Adopting a pet form pet rescue grants you a free toy or accessory</p>
+<p> purchasing items online coming soon!</p>
+
+
+
+</div>
+<h1 class="doggo">Toys and Accessories </h1>
+<hr>
+
+<div class="row">
+			<div class="col-2">
+				<img src="images/acs1.jpg">
+				<div class="dropdown">
+					<p>Toy balls perfect for playing catch</p>
+					<p>$4.99</p>
+				</div>
+			</div>
+			<div class="col-2">
+				<img src="images/acs2.jpg">
+				<div class="dropdown">
+					<p>Pet collars for both cats and dogs</p>
+					<p>$6.99</p>
+				</div>
+			</div>
+			<div class="col-2">
+				<img src="images/acs3.jpg">
+				<div class="dropdown">
+					<p>Toy ropes for any dogs</p>
+					<p>$6.99</p>
+					
+				</div>
+			</div>
+		</div>
+
+	<div class="row">
+			<div class="col-2">
+				<img src="images/acs4.jpg">
+				<div class="dropdown">
+					<p>Multi-purpose water bowls</p>
+					<p>$8.99</p>
+				</div>
+			</div>
+			<div class="col-2">
+				<img src="images/acs5.jpg">
+				<div class="dropdown">
+					<p>Artifical bone for your best friend</p>
+					<p>$6.99</p>
+				</div>
+			</div>
+			<div class="col-2">
+				<img src="images/acs6.jpg">
+				<div class="dropdown">
+					<p> Non-stick food bowl</p>
+					<p>$8.99</p>
+				</div>
+			</div>
+		</div>
+
+	
+<div class="row">
+			<div class="col-2">
+				<img src="images/acs7.jpg">
+				<div class="dropdown">
+					
+					<p>Squeky toys *pets at the shelter love these</p>
+					<p>$5.99</p>
+				</div>
+			</div>
+			<div class="col-2">
+				<img src="images/acs8.jpg">
+				<div class="dropdown">
+					<p>Grooming brushes for fur</p>
+					<p>$4.99</p>
+				</div>
+			</div>
+			<div class="col-2">
+				<img src="images/acs9.jpg">
+				<div class="dropdown">
+					<p>limited time toys</p>
+					<p>$4.99-$9.99</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+</body>
+</html>
+<footer>
+	<p>@2023 Abid Alikhan</p>
+</footer>
+</head>
+<script>
+			var date = new Date();
+			var hour = date.getHours();
+			if ((hour > 6) && (hour < 16)) {
+				document.getElementById("open_closed").innerHTML = "We are Currently Open!";
+				document.getElementById("open_closed").style.color = "green";
+			}
+			else if (hour < 17) {
+				document.getElementById("open_closed").innerHTML = "We are Closing soon";
+				document.getElementById("open_closed").style.color = "orange";
+			}
+			else {
+				document.getElementById("open_closed").innerHTML = "Sorry, we are Closed :( ";
+				document.getElementById("open_closed").style.color = "red";
+			}
+			document.getElementById("hours_of_operation").innerHTML = "Hours of operation:<br/>Mon - Sun: 6 am - 5 pm<br/>";
+			document.getElementById("local_time").innerHTML = "Local date/time: " + date;
+		</script>
+	</div>
